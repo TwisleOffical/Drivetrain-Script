@@ -27,8 +27,6 @@ local function FWD()
             GetVehicleHandlingFloat(veh, 'CHandlingData', 'fDriveBiasFront')
             SetVehicleHandlingField(veh, 'CHandlingData', 'fDriveBiasFront', 1.000000)
 
-
-
         GetVehicleNumberOfWheels(veh)
         SetVehicleWheelIsPowered(veh, 0, true)
         SetVehicleWheelIsPowered(veh, 1, true)
