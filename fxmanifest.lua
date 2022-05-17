@@ -2,7 +2,7 @@ fx_version 'cerulean'
 games {'gta5'}
 
 author 'Twisle'
-description 'A Script That Adds Both Death And Revive Functions'
+description 'A Script That Lets You Change The Drivetrain'
 version '1.0.0'
 
 -- What to run
