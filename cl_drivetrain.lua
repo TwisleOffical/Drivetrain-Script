@@ -2,7 +2,6 @@ local ped = PlayerPedId()
 local veh = GetVehiclePedIsIn(ped, false)
 
 local function RWD()
-
     if IsPedSittingInAnyVehicle(ped) then
 
         if (GetPedInVehicleSeat(veh, -1) == ped) then
@@ -15,9 +14,6 @@ local function RWD()
         SetVehicleWheelIsPowered(veh, 1, false)
         SetVehicleWheelIsPowered(veh, 3, true)
         SetVehicleWheelIsPowered(veh, 4, true)
-
-        print 'back'
-        print 'veh'
 
         end
     end
@@ -39,8 +35,6 @@ local function FWD()
         SetVehicleWheelIsPowered(veh, 3, false)
         SetVehicleWheelIsPowered(veh, 4, false)
 
-        print'front'
-
         end
     end
 end
@@ -59,9 +53,7 @@ local function AWD()
         SetVehicleWheelIsPowered(veh, 1, true)
         SetVehicleWheelIsPowered(veh, 3, true)
         SetVehicleWheelIsPowered(veh, 4, true)
-
-        print'all'
-
+            
         end
     end
 end
@@ -80,33 +72,23 @@ local function FourWD()
         SetVehicleWheelIsPowered(veh, 1, true)
         SetVehicleWheelIsPowered(veh, 3, true)
         SetVehicleWheelIsPowered(veh, 4, true)
-
-        print'all'
-
+            
         end
     end
 end
 
 RegisterCommand(Config.RWD, function()
-
     RWD()
-
 end)
 
 RegisterCommand(Config.FWD, function()
-
     FWD()
-
 end)
 
 RegisterCommand(Config.AWD, function()
-
     AWD()
-
 end)
 
 RegisterCommand(Config.FourWD, function()
-
     FourWD()
-
 end)
